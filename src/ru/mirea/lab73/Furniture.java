@@ -1,23 +1,18 @@
 package ru.mirea.lab73;
 
-public class Furniture {
-    int price;
+public abstract class Furniture {
     int quality;
-    int money = 10000;
-
-
-    void clean() {
-        System.out.println("Предмет почищен");
+    static int money = 1000;
+    Furniture(int quality){
+        this.quality=quality;
     }
+
 
     void repair() {
-        if (quality <= 50) {
-            System.out.println("Предмет починен");
-            money = money - 10 * quality;
-        } else {
-            System.out.println("У предмета нет поломок");
-        }
+        System.out.println("Предмет починен");
     }
+
+    public abstract void clean();
 
 
 }
